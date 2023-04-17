@@ -9,9 +9,9 @@ services:
       - '8807:3306'
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: lms-radec
-      MYSQL_USER: lms-radec
-      MYSQL_PASSWORD: lms-radec
+      MYSQL_DATABASE: lms_radec
+      MYSQL_USER: lms_radec
+      MYSQL_PASSWORD: lms_radec
     networks:
       - lms-radec-network
 
@@ -25,8 +25,8 @@ services:
       - mysql
     environment:
       - PMA_HOST=mysql
-      - PMA_USER=lms-radec
-      - PMA_PASSWORD=lms-radec
+      - PMA_USER=lms_radec
+      - PMA_PASSWORD=lms_radec
     networks:
       - lms-radec-network
 
