@@ -1,9 +1,9 @@
 import Joi from 'joi';
 
 export const createUserSchema = Joi.object({
-  fullname: Joi.string().required(),
-  nisn: Joi.string().required(),
-  username: Joi.string().required(),
+  fullname: Joi.string().min(2).max(100).required(),
+  nisn: Joi.string().length(10).required(),
+  username: Joi.string().regex(/^\S+$/).required(),
   password: Joi.string().min(8).required(),
 });
 
